@@ -17,7 +17,7 @@ lst=[]
 for ix in corpus:
     score=service.find_similar(ix['id'])
     for item in score:
-        if item[1]>.7:        #change to similarity score to whatever your preference is. Closer to 1 means idential content
+        if item[1]>.7:      #Closer to 1 means idential content
             lst.append((ix['id'],item[0],item[1]) if ix['id']!=item[0] else '')
 
 
